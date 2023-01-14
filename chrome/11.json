@@ -1,0 +1,27 @@
+{
+    "version": "0.0.0",
+    "name": "JiraShot",
+    "manifest_version": 3,
+    "description": "Create Jira ticket with screenshot",
+    "action": {
+      "default_title": "JiraShot",
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "img/icon-16.png",
+      "48": "img/icon-48.png",
+      "128": "img/icon-128.png"
+    },
+    "background": {
+      "service_worker": "background.html"
+    },
+    "web_accessible_resources": [{
+      "resources": ["inject.html"],
+      "matches": ["<all_urls>"]
+    }],
+    "permissions": [ "contextMenus", "management", "tabs", "activeTab", "unlimitedStorage", "storage", "https://jirashot-backend.herokuapp.com/*"],
+    "content_security_policy": {
+      "extension_pages": "default-src 'self'; script-src 'self' http://localhost:3000; connect-src http://localhost:3000 http://localhost:8000; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' data:;"
+    }
+  }
+  
