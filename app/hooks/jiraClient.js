@@ -12,8 +12,8 @@ const useJiraClient = () => {
           host,
           authentication: {
             basic: {
-              email: username, //"schaefernicker@gmail.com",
-              apiToken: password //"74BNKAJM4M9A9HcHrTPSE3C5",
+              email: username,
+              apiToken: password,
             },
           },
         });
